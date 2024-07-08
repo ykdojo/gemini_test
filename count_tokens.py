@@ -13,5 +13,11 @@ api_key = os.getenv('GEMINI_API_KEY')
 # Initialize the generative AI with the API key
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel('models/gemini-1.5-flash-001')
-token_count = model.count_tokens("Your text here")
+
+# Read content from combined_files.txt
+with open('combined_files.txt', 'r') as file:
+    content = file.read()
+
+# Count tokens in the content
+token_count = model.count_tokens(content)
 print(f"Total tokens: {token_count.total_tokens}")
