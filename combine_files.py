@@ -57,6 +57,7 @@ def combine_files_and_list_paths(source_dirs, combined_output_file, list_output_
 
 if __name__ == "__main__":
     source_directories = ["../cody"]
+    # source_directories = ["../web-browsing-gpt", "../summarizeThis"]
     combined_output_file = "combined_files.txt"
     list_output_file = "file_list.txt"
     additional_ignores = ["pnpm-lock.yaml"]  # Add more files to ignore as needed
